@@ -1,5 +1,5 @@
 module.exports = {
-  trailingSlash: false,
+  trailingSlash: true,
   exportPathMap: function () {
     return {
       "/": { page: "/" },
