@@ -1,11 +1,8 @@
-const withOptimizedImages = require("next-optimized-images");
-
-module.exports = withOptimizedImages({
+module.exports = {
   trailingSlash: false,
-  handleImages: ["png", "svg"],
   exportPathMap: function () {
     return {
       "/": { page: "/" },
     };
   },
-});
+};

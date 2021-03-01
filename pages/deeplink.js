@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import { BrowserView, MobileView } from "react-device-detect";
 import { useRouter } from "next/router";
 import redirect from "nextjs-redirect";
@@ -20,52 +19,18 @@ export default function DeepLinks() {
 
       <main>
         <h1 className="title">קישורים</h1>
-        <Image
-          src="/images/logo1024.png" // Route of the image file
-          height={300} // Desired size with correct aspect ratio
-          width={300} // Desired size with correct aspect ratio
-          alt="Your Name"
-        />
 
         <MobileView>
           <div className="grid">
-            <a href={fulladress} className="card">
-              <Image
-                src="/images/google-play-badge.png" // Route of the image file
-                height={144} // Desired size with correct aspect ratio
-                width={288} // Desired size with correct aspect ratio
-                alt="google play store"
-              />
-            </a>
-            <a href={fulladress} className="card">
-              <Image
-                src="/images/appstore.svg" // Route of the image file
-                height={144} // Desired size with correct aspect ratio
-                width={288} // Desired size with correct aspect ratio
-                alt="Apple store"
-              />
-            </a>
+            <a href={fulladress} className="card"></a>
+            <a href={fulladress} className="card"></a>
           </div>
         </MobileView>
 
         <BrowserView>
           <div className="grid">
-            <a href={"https://google.com"} className="card">
-              <Image
-                src="/images/google-play-badge.png" // Route of the image file
-                height={144} // Desired size with correct aspect ratio
-                width={288} // Desired size with correct aspect ratio
-                alt="google play store"
-              />
-            </a>
-            <a href={"https://itunes.com"} className="card">
-              <Image
-                src="/images/appstore.svg" // Route of the image file
-                height={144} // Desired size with correct aspect ratio
-                width={288} // Desired size with correct aspect ratio
-                alt="Apple store"
-              />
-            </a>
+            <a href={"https://google.com"} className="card"></a>
+            <a href={"https://itunes.com"} className="card"></a>
           </div>
         </BrowserView>
       </main>

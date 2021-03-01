@@ -1,6 +1,4 @@
 import Head from "next/head";
-import Link from "next/link";
-import Image from "next/image";
 
 export default function Privacy() {
   return (
@@ -12,12 +10,7 @@ export default function Privacy() {
 
       <main>
         <h1 className="title">פרטיות</h1>
-        <Image
-          src="/images/logo1024.png" // Route of the image file
-          height={300} // Desired size with correct aspect ratio
-          width={300} // Desired size with correct aspect ratio
-          alt="Your Name"
-        />
+
         <p className="description">
           אסלי רואה חשיבות רבה במתן פרטיות למשתמשים באתרי אינטרנט, תוכנות,
           תכנים, פורומים, אפליקציות ובפעילויות במדיות שונות שמנהלת ומפעילה
