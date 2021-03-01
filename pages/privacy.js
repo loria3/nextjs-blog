@@ -10,6 +10,7 @@ export default function Privacy() {
 
       <main>
         <h1 className="title">פרטיות</h1>
+        <img src="static/images/logo1024.png" style={{ width: "20em" }} />
 
         <p className="description">
           אסלי רואה חשיבות רבה במתן פרטיות למשתמשים באתרי אינטרנט, תוכנות,

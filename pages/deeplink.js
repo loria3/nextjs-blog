@@ -22,20 +22,37 @@ export default function DeepLinks() {
 
         <MobileView>
           <div className="grid">
-            <a href={fulladress} className="card"></a>
-            <a href={fulladress} className="card"></a>
+            <a href={fulladress} className="card">
+              <img src="static/images/appstore.svg" style={{ width: "5em" }} />
+            </a>
+            <a href={fulladress} className="card">
+              <img
+                src="static/images/google-play-badge.png"
+                style={{ width: "5em" }}
+              />
+            </a>
           </div>
         </MobileView>
 
         <BrowserView>
           <div className="grid">
-            <a href={"https://google.com"} className="card"></a>
-            <a href={"https://itunes.com"} className="card"></a>
+            <a href={"https://google.com"} className="card">
+              <img src="static/images/appstore.svg" style={{ width: "10em" }} />
+            </a>
+            <a href={"https://itunes.com"} className="card">
+              <img
+                src="static/images/google-play-badge.png"
+                style={{ width: "13em" }}
+              />
+            </a>
           </div>
         </BrowserView>
       </main>
 
-      <footer>Powered by USLY</footer>
+      <footer>
+        <p> Powered by </p>
+        <img src="static/images/logo1024.png" style={{ width: "5em" }} />
+      </footer>
 
       <style jsx>{`
         .container {
