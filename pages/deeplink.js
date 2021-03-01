@@ -23,11 +23,11 @@ export default function DeepLinks() {
         <MobileView>
           <div className="grid">
             <a href={fulladress} className="card">
-              <img src="static/images/appstore.svg" style={{ width: "5em" }} />
+              <img src="/static/images/appstore.svg" style={{ width: "5em" }} />
             </a>
             <a href={fulladress} className="card">
               <img
-                src="static/images/google-play-badge.png"
+                src="/static/images/google-play-badge.png"
                 style={{ width: "5em" }}
               />
             </a>
@@ -37,11 +37,14 @@ export default function DeepLinks() {
         <BrowserView>
           <div className="grid">
             <a href={"https://google.com"} className="card">
-              <img src="static/images/appstore.svg" style={{ width: "10em" }} />
+              <img
+                src="/static/images/appstore.svg"
+                style={{ width: "10em" }}
+              />
             </a>
             <a href={"https://itunes.com"} className="card">
               <img
-                src="static/images/google-play-badge.png"
+                src="/static/images/google-play-badge.png"
                 style={{ width: "13em" }}
               />
             </a>
