@@ -2,6 +2,8 @@ import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
 
+import React from "react";
+
 export default function Home() {
   return (
     <div className="container">
@@ -12,12 +14,8 @@ export default function Home() {
 
       <main>
         <h1 className="title"></h1>
-        <Image
-          src="/images/logo1024.png" // Route of the image file
-          height={144} // Desired size with correct aspect ratio
-          width={144} // Desired size with correct aspect ratio
-          alt="Your Name"
-        />
+        <img src="images/logo1024.png" />
+
         <p className="description"></p>
 
         <div className="grid">

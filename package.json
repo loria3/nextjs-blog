@@ -8,6 +8,8 @@
     "start": "next start"
   },
   "dependencies": {
+    "imagemin-optipng": "^8.0.0",
+    "imagemin-svgo": "^8.0.0",
     "next": "^10.0.0",
     "next-optimized-images": "^2.6.2",
     "nextjs-redirect": "^5.0.2",
