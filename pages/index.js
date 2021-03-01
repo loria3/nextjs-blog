@@ -37,10 +37,10 @@ export default function Home() {
 
       <footer>
         <Image
-          src="/images/logo1024.png" // Route of the image file
+          src="/logo1024.png" // Route of the image file
           height={144} // Desired size with correct aspect ratio
           width={144} // Desired size with correct aspect ratio
-          alt="USLY"
+          alt="Your Name"
         />
       </footer>
 
