@@ -11,7 +11,7 @@ export default function Home() {
 
       <main>
         <h1 className="title"></h1>
-        <img src="images/logo1024.png" />
+        <img src="static/images/logo1024.png" style={{ width: "20em" }} />
 
         <p className="description"></p>
 
