@@ -8,7 +8,7 @@ export default function DeepLinks() {
   const { articleid, catId } = router.query;
   let fulladress = "ibetterMe://article/" + articleid + "/" + catId;
 
-  //redirect(fulladress, { statusCode: 301 });
+  redirect(fulladress, { statusCode: 301 });
 
   return (
     <div className="container">
