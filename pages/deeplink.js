@@ -5,8 +5,8 @@ import redirect from "nextjs-redirect";
 
 export default function DeepLinks() {
   const router = useRouter();
-  const { articleid } = router.query;
-  let fulladress = "ibetterMe://article/" + articleid;
+  const { articleid, catId } = router.query;
+  let fulladress = "ibetterMe://article/" + articleid + "/" + catId;
 
   //redirect(fulladress, { statusCode: 301 });
 
@@ -21,6 +21,7 @@ export default function DeepLinks() {
         <h1 className="title">קישורים</h1>
 
         <MobileView>
+          <p>Mobile</p>
           <div className="grid">
             <a href={fulladress} className="card">
               <img src="/static/images/appstore.svg" style={{ width: "5em" }} />
