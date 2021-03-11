@@ -23,6 +23,7 @@ export default function DeepLinks() {
 
           <MobileView>
             <p>Mobile</p>
+            <p>{fulladress}</p>
             <div className="grid">
               <a href={fulladress} className="card">
                 <img
