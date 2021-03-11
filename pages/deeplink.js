@@ -6,7 +6,7 @@ import redirect from "nextjs-redirect";
 export default function DeepLinks() {
   const router = useRouter();
   const { articleid, catId } = router.query;
-  let fulladress = "ibetterMe://article/" + articleid + "/" + catId;
+  let fulladress = "ibetterme://article/" + articleid + "/" + catId;
 
   const Redirect = redirect(fulladress);
 
