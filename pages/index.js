@@ -27,6 +27,11 @@ export default function Home() {
               <a>Deeplinks</a>
             </Link>
           </div>
+          <div className="card">
+            <Link href="/deeplink2">
+              <a>Deeplinks2</a>
+            </Link>
+          </div>
         </div>
       </main>
 

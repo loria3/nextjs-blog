@@ -1,5 +1,6 @@
 {
   "/deeplink": "pages/deeplink.html",
+  "/deeplink2": "pages/deeplink2.html",
   "/": "pages/index.html",
   "/privacy": "pages/privacy.html",
   "/_app": "pages/_app.js",

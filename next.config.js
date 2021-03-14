@@ -5,6 +5,7 @@ module.exports = {
       "/": { page: "/" },
       "/privacy": { page: "/privacy" },
       "/deeplink": { page: "/deeplink" },
+      "/deeplink2": { page: "/deeplink2" },
     };
   },
 };
