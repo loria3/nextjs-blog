@@ -7,6 +7,7 @@ export default function DeepLinks() {
   const router = useRouter();
   const { articleid, catId } = router.query;
   let fulladress = "ibetterme://article/" + articleid + "/" + catId;
+  let fullAdress2 = "ibetterme://article?item=" + articleid;
 
   const Redirect = redirect(fulladress);
 
@@ -24,6 +25,7 @@ export default function DeepLinks() {
           <MobileView>
             <p>Mobile</p>
             <p>{fulladress}</p>
+            <p>{fullAdress2}</p>
             <div className="grid">
               <a href={fulladress} className="card">
                 <img
