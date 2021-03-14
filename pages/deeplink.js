@@ -8,7 +8,8 @@ export default function DeepLinks() {
   const { articleid, catId } = router.query;
   let fulladress = "ibetterme://article/" + articleid + "/" + catId;
   let fullAdress2 = "ibetterme://article?item=" + articleid;
-
+  console.log({ fullAdress2 });
+  console.log({ fulladress });
   const Redirect = redirect(fulladress);
 
   return (
