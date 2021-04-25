@@ -34,40 +34,45 @@ export default function DeepLinks() {
                 <p>Mobile</p>
 
                 <div className="grid">
-                  <a
-                    href={"https://apps.apple.com/us/app/usly/id1546418617"}
-                    className="card"
-                  >
-                    <img
-                      src="/static/images/appstore.svg"
-                      style={{ width: "5em" }}
-                    />
-                  </a>
-                  <a
-                    href={
-                      "https://play.google.com/store/apps/details?id=com.magicgrowth"
-                    }
-                    className="card"
-                  >
-                    <img
-                      src="/static/images/google-play-badge.png"
-                      style={{ width: "5em" }}
-                    />
-                  </a>
+                  <div className="card">
+                    <a href={"https://apps.apple.com/us/app/usly/id1546418617"}>
+                      <img
+                        src="/static/images/appstore.svg"
+                        style={{ width: "5em" }}
+                      />
+                    </a>
+                  </div>
+                  <div className="card">
+                    <a
+                      href={
+                        "https://play.google.com/store/apps/details?id=com.magicgrowth"
+                      }
+                    >
+                      <img
+                        src="/static/images/google-play-badge.png"
+                        style={{ width: "5em" }}
+                      />
+                    </a>
+                  </div>
                 </div>
               </>
             </MobileView>
 
             <BrowserView>
               <div className="grid">
-                <a href={"https://google.com"} className="card">
+                <a
+                  href={"https://apps.apple.com/us/app/usly/id1546418617"}
+                  className="card"
+                >
                   <img
                     src="/static/images/appstore.svg"
                     style={{ width: "10em" }}
                   />
                 </a>
                 <a
-                  href={"https://apps.apple.com/us/app/usly/id1546418617"}
+                  href={
+                    "https://play.google.com/store/apps/details?id=com.magicgrowth"
+                  }
                   className="card"
                 >
                   <img
