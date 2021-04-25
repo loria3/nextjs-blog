@@ -27,6 +27,27 @@ export default function Home() {
               <a>Deeplinks</a>
             </Link>
           </div>
+
+          <div className="card">
+            <a href={"https://apps.apple.com/us/app/usly/id1546418617"}>
+              <img
+                src="/static/images/appstore.svg"
+                style={{ width: "100%" }}
+              />
+            </a>
+          </div>
+          <div className="card">
+            <a
+              href={
+                "https://play.google.com/store/apps/details?id=com.magicgrowth"
+              }
+            >
+              <img
+                src="/static/images/google-play-badge.png"
+                style={{ width: "100%" }}
+              />
+            </a>
+          </div>
         </div>
       </main>
 
