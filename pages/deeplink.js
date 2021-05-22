@@ -13,7 +13,7 @@ export default function DeepLinks() {
     setFullAdress("ibetterme://article/" + articleid + "/" + catId);
   }
 
-  if (!fulladress) return <h1>Loading...</h1>;
+  if (!fulladress) return <h1>Loading.......</h1>;
 
   const Redirect = redirect(fulladress);
 
