@@ -5,16 +5,47 @@ export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>USLY</title>
+        <title>US.LY</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <h1 className="title"></h1>
-        <img src="static/images/logo1024.png" style={{ width: "20em" }} />
+        <h1 className="title">Us.ly</h1>
+        <img src="static/images/logo1024.png" style={{ width: "10em" }} />
 
-        <p className="description"></p>
-
+        <p className="description">
+          הינה אפליקציה חברתית המהווה ערוץ מרכזי בפלטפורמה המספקת תוכן ממוקד
+          ותרגילים מעשיים להתפתחות אישית על ידי אימון ופיתוח של הרגלים חדשים
+          ומיטיבים בהתאמה אישית. • אנחנו מאמינים שהפרט שואף להתפתח במטרה להגשים
+          את עצמו ולשפר את איכות חייו • אנחנו מאמינים שקבוצה העושה צעדים יחדו
+          מאפשרת לפרט לפתח הרגלים רבים יותר במהירות גבוהה יותר • אנו מאמינים
+          שחיבור והעצמה של נותני השירותים וצורכי התוכן יפתח קהילה תומכת ומשתפרת
+          המשפיעה לטובה על החברה והעולם לימדו הגשימו ומצו את הפוטנציאל הגדול
+          והאמיתי הטמון בכם בעזרת תכנים ייעודים ותרגילים אמיתיים ממיטב הכותבים
+          ובעלי המקצוע. Usly מביאה לכם מגוון תכנים ושיעורי חיים ישימים שמטרתם
+          שיפור עצמי. כל התכנים שלנו נועדו לעזור לך להשיג את מלוא הפוטנציאל
+          המוחי שלך, הגוף, הנשמה והקריירה שלך. עם נושאים מרכזיים כמו מנהיגות,
+          ביטחון, יזמות, פרודוקטיביות, בריאות וכושר, מערכות יחסים, אושר, רוחניות
+          ועוד, Usly היא התחנה המרכזית והיחידה שלך להתפתחות אישית בכל תחומי
+          החיים
+        </p>
+        <div style={{ float: "right" }}>
+          <a href={"https://apps.apple.com/us/app/usly/id1546418617"}>
+            <img src="/static/images/appstore.svg" style={{ width: "100%" }} />
+          </a>
+        </div>
+        <div>
+          <a
+            href={
+              "https://play.google.com/store/apps/details?id=com.magicgrowth"
+            }
+          >
+            <img
+              src="/static/images/google-play-badge.png"
+              style={{ width: "8em" }}
+            />
+          </a>
+        </div>
         <div className="grid">
           <div className="card">
             <Link href="/privacy">
@@ -22,32 +53,11 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="card">
+          {/* <div className="card">
             <Link href="/deeplink">
               <a>Deeplinks</a>
             </Link>
-          </div>
-
-          <div className="card">
-            <a href={"https://apps.apple.com/us/app/usly/id1546418617"}>
-              <img
-                src="/static/images/appstore.svg"
-                style={{ width: "100%" }}
-              />
-            </a>
-          </div>
-          <div className="card">
-            <a
-              href={
-                "https://play.google.com/store/apps/details?id=com.magicgrowth"
-              }
-            >
-              <img
-                src="/static/images/google-play-badge.png"
-                style={{ width: "100%" }}
-              />
-            </a>
-          </div>
+          </div> */}
         </div>
       </main>
 

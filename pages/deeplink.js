@@ -22,7 +22,7 @@ export default function DeepLinks() {
       <Redirect>
         <div className="container">
           <Head>
-            <title>USLY - Deeplinks</title>
+            <title>US.LY - Deeplinks</title>
             <link rel="icon" href="/favicon.ico" />
           </Head>
 
