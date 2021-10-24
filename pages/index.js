@@ -61,7 +61,9 @@ export default function Home() {
         </div>
       </main>
 
-      <footer></footer>
+      <footer>
+        <p>Powered by us.ly v2.0</p>
+      </footer>
 
       <style jsx>{`
         .container {
