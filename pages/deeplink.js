@@ -6,11 +6,13 @@ import { useEffect, useState } from "react";
 
 export default function DeepLinks() {
   const router = useRouter();
-  const { articleid, catId } = router.query;
+  const { articleid, catId, authorsBio, writerId } = router.query;
   const [fulladress, setFullAdress] = useState(null);
 
   if (articleid && catId && !fulladress) {
     setFullAdress("ibetterme://article/" + articleid + "/" + catId);
+  } else if (authorsBio && writerId) {
+    setFullAdress("ibetterme://authorsBio/" + writerId);
   }
 
   if (!fulladress) return <h1>Loading.......</h1>;
