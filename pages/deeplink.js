@@ -6,13 +6,12 @@ import { useEffect, useState } from "react";
 
 export default function DeepLinks() {
   const router = useRouter();
-  const { articleid, catId, authorsBio, writerId } = router.query;
+  const { articleid, catId, authorsBio } = router.query;
   const [fulladress, setFullAdress] = useState(null);
-
   if (articleid && catId && !fulladress) {
     setFullAdress("ibetterme://article/" + articleid + "/" + catId);
-  } else if (authorsBio && writerId) {
-    setFullAdress("ibetterme://authorsBio/" + writerId);
+  } else if (authorsBio && !fulladress) {
+    setFullAdress("ibetterme://authorsBio/" + authorsBio);
   }
 
   if (!fulladress)
@@ -96,7 +95,7 @@ export default function DeepLinks() {
           <footer>
             <p> Powered by </p>
             <img src="static/images/logo1024.png" style={{ width: "5em" }} />
-            <p> Version 2.0</p>
+            <p> Version 2.1</p>
           </footer>
 
           <style jsx>{`
