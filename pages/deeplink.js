@@ -89,6 +89,7 @@ export default function DeepLinks() {
           <footer>
             <p> Powered by </p>
             <img src="static/images/logo1024.png" style={{ width: "5em" }} />
+            <p> Version 2.0</p>
           </footer>
 
           <style jsx>{`
