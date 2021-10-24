@@ -15,7 +15,14 @@ export default function DeepLinks() {
     setFullAdress("ibetterme://authorsBio/" + writerId);
   }
 
-  if (!fulladress) return <h1>Loading.......</h1>;
+  if (!fulladress)
+    return (
+      <>
+        <p>v 2.0</p>
+        <br />
+        <h1>Loading.......</h1>
+      </>
+    );
 
   const Redirect = redirect(fulladress);
 
