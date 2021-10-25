@@ -1,12 +1,50 @@
 import React from "react";
 import Link from "next/link";
 
+import useSWR from "swr";
+import fetchHelper from "../utils/fetcher";
 // components
 
 import Navbar from "../components/Navbars/AuthNavbar.js";
 import Footer from "../components/Footers/Footer.js";
+const imageUrl = {
+  url: "https://niche.ink",
+};
 
-export default function Landing() {
+export default function Products() {
+  const { data: products } = useSWR("getProducts", fetchHelper);
+
+  if (!products) return <div></div>;
+
+  //   author:
+  // WriterEmail: "aricha.noam@gmail.com"
+  // WriterFacebook: "https://www.facebook.com/noam.aricha"
+  // WriterLinkedIn: "https://www.linkedin.com/in/noamaricha/"
+  // WriterLongDescription: "שלום לכםן:)\n\nאני נועם אריכא, בן, אח, בן זוג, חבר ואב לשניים. \nמדריך ומלווה צעירים ביצירת חיים שמחים, מרגשים ומשמעותיים.\n\nהחיים הם מסע של התפתחות, למידה ותרגול ביצירת בהירות ומיקוד בהגשמת חיים שאנחנו מייחלים לעצמנו. \n\nהתכנים שמושכים אותי הם  מעולמות המיינדפולנס, הפסיכולוגיה החיובית והתעסוקתית, תיאוריות על אושר, מנהיגות והעצמה, לאורך השנים צברתי ניסיון רב בלווי צעירים בשלבי החיים השונים, הכוונה והכשרות מקצועיות, תפקידי ניהול והובלת קבוצות ותהליכים במסגרות מגוונות, תארים אקדמיים בניהול והתמחות במנהיגות חברתית, הכשרות, הדרכה והעצמה.\n\nאני מאמין שבכל אחד מאתנו קיים פוטנציאל ייחודי, ושעלינו להביאו לידי ביטוי כדי לחיות חיים מרגשים ומספקים. \nאני גם מאמין שככל שיהיו יותר אנשים שמגשימים את עצמם בחיים כך יהפוך העולם שלנו למקום טוב יותר עבורנו ועבור הדורות הבאים.\n"
+  // WriterName: "נועם אריכא"
+  // WriterPhone: "+13012223168"
+  // WriterPic: {_id: '5fb9e2ed1054347fe6670ea9', name: '114806375_10158310954377199_987255163248939613_o.jpg', alternativeText: '', caption: '', hash: '114806375_10158310954377199_987255163248939613_o_5e4bee0cd6', …}
+  // WriterShortDescription: "מדריך ומלווה צעירים להגשמה עצמית בקריירה ובחיים"
+  // WriterWebsite: "https://uslyapp.github.io/usly"
+  // WriterWhatsApp: "+13012223168"
+  // WriterYouTube: "https://www.youtube.com/channel/UCz6vGgW6Nh8QExJW1KX_pgg/featured"
+  // createdAt: "2021-01-16T07:24:49.078Z"
+  // id: "600294c15cef960dd3764a7c"
+  // published_at: "2021-01-16T07:24:53.609Z"
+  // updatedAt: "2021-02-07T00:01:48.452Z"
+  // __v: 0
+  // _id: "600294c15cef960dd3764a7c"
+  // [[Prototype]]: Object
+  // createdAt: "2021-07-13T03:13:13.971Z"
+  // ecom_category: {EcomCategoryType: null, _id: '60e7b9f86982520c9dbb684c', ECategoryName: 'אונליין', ECategoryDescription: 'קבוצות התפתחות אשר צועדות יחדיו.\nמשתפים, לומדים ותומכים הדדית בהתפתחות האישית', published_at: '2021-07-09T02:52:46.610Z', …}
+  // id: "60ed04c96982520c9dbb685c"
+  // productLong: " תוכנית הכוונה תעסוקתית און ליין בקבוצה אינטימית.\n\n במשך 10 מפגשים נתבונן פנימה ונכיר ביכולותינו היחודיות, נתחבר אליהן. נייצר שינויים שיעלו את איכות החיים שלנו, האושר והשמחה שלנו כבר במהך התכונית ויצירת חיבור לשימור השינוי בחיינו."
+  // productMainImg: {_id: '60ed04ac6982520c9dbb685b', name: 'arrow logo 1.png', alternativeText: '', caption: '', hash: 'arrow_logo_1_09e6e7c5da', …}
+  // productName: "תוכנית החץ "
+  // productPrice: "2000"
+  // productSecondaryImg: []
+  // productShort: "הכוונה תעסוקתית"
+
   return (
     <>
       <Navbar transparent />
@@ -29,12 +67,10 @@ export default function Landing() {
               <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                 <div className="pr-12">
                   <h1 className="text-white font-semibold text-5xl">
-                    Your story starts with us.
+                    הסיפור מתחיל בשיחת הכרות
                   </h1>
                   <p className="mt-4 text-lg text-blueGray-200">
-                    This is a simple example of a Landing Page you can build
-                    using Notus NextJS. It features multiple CSS components
-                    based on the Tailwind CSS design system.
+                    כל התחלה הוא סוף של משהו אחר
                   </p>
                 </div>
               </div>
@@ -65,157 +101,56 @@ export default function Landing() {
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center text-center mb-24">
               <div className="w-full lg:w-6/12 px-4">
-                <h2 className="text-4xl font-semibold">המומחים שלנו</h2>
-                <p className="text-lg leading-relaxed m-4 text-blueGray-500">
-                  לפעמים לבקש עזרה כבר עוזר
+                <h2 className="text-4xl font-semibold">המוצרים שלנו</h2>
+
+                <p className="text-lg bold leading-relaxed m-4 text-blueGray-500">
+                   כנסו לאפליקציה כדי להזמין מוצר ולהכיר את המומחים
                 </p>
               </div>
             </div>
-            <div className="flex flex-wrap">
-              <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-                <div className="px-6">
-                  <img
-                    alt="..."
-                    src="/img/team-1-800x800.jpg"
-                    className="shadow-lg rounded-full mx-auto max-w-120-px"
-                  />
-                  <div className="pt-6 text-center">
-                    <h5 className="text-xl font-bold">Ryan Tompson</h5>
-                    <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
-                      Web Developer
-                    </p>
-                    <div className="mt-6">
-                      <button
-                        className="bg-lightBlue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-twitter"></i>
-                      </button>
-                      <button
-                        className="bg-lightBlue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-facebook-f"></i>
-                      </button>
-                      <button
-                        className="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-dribbble"></i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-                <div className="px-6">
-                  <img
-                    alt="..."
-                    src="/img/team-2-800x800.jpg"
-                    className="shadow-lg rounded-full mx-auto max-w-120-px"
-                  />
-                  <div className="pt-6 text-center">
-                    <h5 className="text-xl font-bold">Romina Hadid</h5>
-                    <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
-                      Marketing Specialist
-                    </p>
-                    <div className="mt-6">
-                      <button
-                        className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-google"></i>
-                      </button>
-                      <button
-                        className="bg-lightBlue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-facebook-f"></i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-                <div className="px-6">
-                  <img
-                    alt="..."
-                    src="/img/team-3-800x800.jpg"
-                    className="shadow-lg rounded-full mx-auto max-w-120-px"
-                  />
-                  <div className="pt-6 text-center">
-                    <h5 className="text-xl font-bold">Alexa Smith</h5>
-                    <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
-                      UI/UX Designer
-                    </p>
-                    <div className="mt-6">
-                      <button
-                        className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-google"></i>
-                      </button>
-                      <button
-                        className="bg-lightBlue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-twitter"></i>
-                      </button>
-                      <button
-                        className="bg-blueGray-700 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-instagram"></i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-                <div className="px-6">
-                  <img
-                    alt="..."
-                    src="/img/team-4-470x470.png"
-                    className="shadow-lg rounded-full mx-auto max-w-120-px"
-                  />
-                  <div className="pt-6 text-center">
-                    <h5 className="text-xl font-bold">Jenna Kardi</h5>
-                    <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
-                      Founder and CEO
-                    </p>
-                    <div className="mt-6">
-                      <button
-                        className="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-dribbble"></i>
-                      </button>
-                      <button
-                        className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-google"></i>
-                      </button>
-                      <button
-                        className="bg-lightBlue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-twitter"></i>
-                      </button>
-                      <button
-                        className="bg-blueGray-700 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-instagram"></i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
+            <div className="h-512 grid grid-rows-3 grid-flow-col gap-4">
+              {products.map((prd) => {
+                let imgUrl = `${imageUrl.url}${
+                  prd.productMainImg.formats.small
+                    ? prd.productMainImg.formats.small.url
+                    : prd.productMainImg.url
+                }`;
+
+                return (
+                  <Link
+                    href={{
+                      pathname: "/product/",
+                      query: { id: prd.id },
+                    }}
+                  >
+                    <a key={prd.id} className="m-1" href="/product/">
+                      <div className="flex flex-wrap justify-center text-center mb-16">
+                        <div className="w-full lg:w-6/12 px-4">
+                          {imgUrl ? (
+                            <img
+                              alt="..."
+                              src={imgUrl}
+                              className="shadow-lg min-h-120-px max-h-120-px max-w-120-px min-w-120-px"
+                            />
+                          ) : null}
+
+                          <p className="text-lg bold leading-relaxed m-4 text-blueGray-500">
+                            {prd.productName}
+                          </p>
+                          <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
+                            {prd.productShort}
+                          </p>
+                        </div>
+                      </div>
+                    </a>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </section>
-
+        {/* 
         <section className="pb-20 relative block bg-blueGray-800">
           <div
             className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20"
@@ -358,7 +293,7 @@ export default function Landing() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
       </main>
       <Footer />
     </>

@@ -1283,11 +1283,6 @@ select {
   background-color: rgba(167, 243, 208, var(--tw-bg-opacity));
 }
 
-.bg-emerald-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgba(52, 211, 153, var(--tw-bg-opacity));
-}
-
 .bg-emerald-500 {
   --tw-bg-opacity: 1;
   background-color: rgba(16, 185, 129, var(--tw-bg-opacity));
@@ -1306,11 +1301,6 @@ select {
 .bg-red-200 {
   --tw-bg-opacity: 1;
   background-color: rgba(254, 202, 202, var(--tw-bg-opacity));
-}
-
-.bg-red-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgba(248, 113, 113, var(--tw-bg-opacity));
 }
 
 .bg-red-500 {
@@ -1376,11 +1366,6 @@ select {
 .active\:bg-indigo-600:active {
   --tw-bg-opacity: 1;
   background-color: rgba(79, 70, 229, var(--tw-bg-opacity));
-}
-
-.active\:bg-blueGray-50:active {
-  --tw-bg-opacity: 1;
-  background-color: rgba(248, 250, 252, var(--tw-bg-opacity));
 }
 
 .active\:bg-blueGray-600:active {
@@ -1530,11 +1515,6 @@ select {
 .rounded-l {
   border-top-left-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
-}
-
-.rounded-t-lg {
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
 }
 
 .rounded-tl {
@@ -1977,10 +1957,6 @@ select {
   clear: none;
 }
 
-.font-light {
-  font-weight: 300;
-}
-
 .font-normal {
   font-weight: 400;
 }
@@ -2043,10 +2019,6 @@ select {
 
 .h-full {
   height: 100%;
-}
-
-.h-95-px {
-  height: 95px;
 }
 
 .h-350-px {
@@ -2167,6 +2139,10 @@ select {
   margin: 4rem;
 }
 
+.m-20 {
+  margin: 5rem;
+}
+
 .-m-16 {
   margin: -4rem;
 }
@@ -2273,10 +2249,6 @@ select {
   margin-top: 1.25rem;
 }
 
-.mb-5 {
-  margin-bottom: 1.25rem;
-}
-
 .mt-6 {
   margin-top: 1.5rem;
 }
@@ -2317,10 +2289,6 @@ select {
   margin-bottom: 6rem;
 }
 
-.mt-32 {
-  margin-top: 8rem;
-}
-
 .mr-auto {
   margin-right: auto;
 }
@@ -2341,16 +2309,16 @@ select {
   margin-left: -5rem;
 }
 
-.-mt-24 {
-  margin-top: -6rem;
-}
-
 .-mt-48 {
   margin-top: -12rem;
 }
 
 .-mt-64 {
   margin-top: -16rem;
+}
+
+.max-h-120-px {
+  max-height: 120px;
 }
 
 .max-w-sm {
@@ -2381,8 +2349,8 @@ select {
   max-width: 150px;
 }
 
-.min-h-screen-75 {
-  min-height: 75vh;
+.min-h-120-px {
+  min-height: 120px;
 }
 
 .min-w-0 {
@@ -2391,6 +2359,10 @@ select {
 
 .min-w-48 {
   min-width: 12rem;
+}
+
+.min-w-120-px {
+  min-width: 120px;
 }
 
 .min-w-140-px {
@@ -2594,11 +2566,6 @@ select {
   padding-right: 1rem;
 }
 
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -2627,11 +2594,6 @@ select {
 .py-16 {
   padding-top: 4rem;
   padding-bottom: 4rem;
-}
-
-.py-20 {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
 }
 
 .py-24 {
@@ -2790,10 +2752,6 @@ select {
 
 .bottom-auto {
   bottom: auto;
-}
-
-.-top-94-px {
-  top: -94px;
 }
 
 .resize-none {
@@ -3296,10 +3254,6 @@ select {
   width: 3rem;
 }
 
-.w-16 {
-  width: 4rem;
-}
-
 .w-auto {
   width: auto;
 }
@@ -3328,6 +3282,10 @@ select {
   z-index: 50;
 }
 
+.gap-4 {
+  gap: 1rem;
+}
+
 .gap-6 {
   gap: 1.5rem;
 }
@@ -3354,6 +3312,10 @@ select {
 
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-rows-3 {
+  grid-template-rows: repeat(3, minmax(0, 1fr));
 }
 
 .transform {
@@ -3507,13 +3469,6 @@ select {
 }
 
 @media (min-width: 640px) {
-  .sm\:mt-0 {
-    margin-top: 0px;
-  }
-
-  .sm\:mr-2 {
-    margin-right: 0.5rem;
-  }
 }
 
 @media (min-width: 768px) {
@@ -3598,10 +3553,6 @@ select {
     padding-bottom: 0.5rem;
   }
 
-  .md\:pr-12 {
-    padding-right: 3rem;
-  }
-
   .md\:pt-32 {
     padding-top: 8rem;
   }
@@ -3643,10 +3594,6 @@ select {
     width: 33.333333%;
   }
 
-  .md\:w-5\/12 {
-    width: 41.666667%;
-  }
-
   .md\:w-6\/12 {
     width: 50%;
   }
@@ -3685,24 +3632,12 @@ select {
     flex-direction: row;
   }
 
-  .lg\:self-center {
-    align-self: center;
-  }
-
   .lg\:justify-start {
     justify-content: flex-start;
   }
 
-  .lg\:order-1 {
-    order: 1;
-  }
-
   .lg\:order-2 {
     order: 2;
-  }
-
-  .lg\:order-3 {
-    order: 3;
   }
 
   .lg\:mb-0 {
@@ -3751,10 +3686,6 @@ select {
     padding-top: 1rem;
   }
 
-  .lg\:pt-12 {
-    padding-top: 3rem;
-  }
-
   .lg\:pt-24 {
     padding-top: 6rem;
   }
@@ -3774,10 +3705,6 @@ select {
 
   .lg\:text-left {
     text-align: left;
-  }
-
-  .lg\:text-right {
-    text-align: right;
   }
 
   .lg\:text-white {

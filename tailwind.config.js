@@ -9,6 +9,7 @@ module.exports = {
       safelist: [],
     },
   },
+
   theme: {
     colors: {
       ...colors,
@@ -51,7 +52,24 @@ module.exports = {
         "500-px": "500px",
         "600-px": "600px",
       },
+      minHeight: {
+        "100-px": "100px",
+        "120-px": "120px",
+        "150-px": "150px",
+        "180-px": "180px",
+        "200-px": "200px",
+        "210-px": "210px",
+        "580-px": "580px",
+        "860-px": "860px",
+      },
       maxHeight: {
+        "100-px": "100px",
+        "120-px": "120px",
+        "150-px": "150px",
+        "180-px": "180px",
+        "200-px": "200px",
+        "210-px": "210px",
+        "580-px": "580px",
         "860-px": "860px",
       },
       maxWidth: {
@@ -64,6 +82,13 @@ module.exports = {
         "580-px": "580px",
       },
       minWidth: {
+        "100-px": "100px",
+        "120-px": "120px",
+        "150-px": "150px",
+        "180-px": "180px",
+        "200-px": "200px",
+        "210-px": "210px",
+        "580-px": "580px",
         "140-px": "140px",
         48: "12rem",
       },
