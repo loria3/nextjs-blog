@@ -16,35 +16,6 @@ export default function Products() {
 
   if (!products) return <div></div>;
 
-  //   author:
-  // WriterEmail: "aricha.noam@gmail.com"
-  // WriterFacebook: "https://www.facebook.com/noam.aricha"
-  // WriterLinkedIn: "https://www.linkedin.com/in/noamaricha/"
-  // WriterLongDescription: "שלום לכםן:)\n\nאני נועם אריכא, בן, אח, בן זוג, חבר ואב לשניים. \nמדריך ומלווה צעירים ביצירת חיים שמחים, מרגשים ומשמעותיים.\n\nהחיים הם מסע של התפתחות, למידה ותרגול ביצירת בהירות ומיקוד בהגשמת חיים שאנחנו מייחלים לעצמנו. \n\nהתכנים שמושכים אותי הם  מעולמות המיינדפולנס, הפסיכולוגיה החיובית והתעסוקתית, תיאוריות על אושר, מנהיגות והעצמה, לאורך השנים צברתי ניסיון רב בלווי צעירים בשלבי החיים השונים, הכוונה והכשרות מקצועיות, תפקידי ניהול והובלת קבוצות ותהליכים במסגרות מגוונות, תארים אקדמיים בניהול והתמחות במנהיגות חברתית, הכשרות, הדרכה והעצמה.\n\nאני מאמין שבכל אחד מאתנו קיים פוטנציאל ייחודי, ושעלינו להביאו לידי ביטוי כדי לחיות חיים מרגשים ומספקים. \nאני גם מאמין שככל שיהיו יותר אנשים שמגשימים את עצמם בחיים כך יהפוך העולם שלנו למקום טוב יותר עבורנו ועבור הדורות הבאים.\n"
-  // WriterName: "נועם אריכא"
-  // WriterPhone: "+13012223168"
-  // WriterPic: {_id: '5fb9e2ed1054347fe6670ea9', name: '114806375_10158310954377199_987255163248939613_o.jpg', alternativeText: '', caption: '', hash: '114806375_10158310954377199_987255163248939613_o_5e4bee0cd6', …}
-  // WriterShortDescription: "מדריך ומלווה צעירים להגשמה עצמית בקריירה ובחיים"
-  // WriterWebsite: "https://uslyapp.github.io/usly"
-  // WriterWhatsApp: "+13012223168"
-  // WriterYouTube: "https://www.youtube.com/channel/UCz6vGgW6Nh8QExJW1KX_pgg/featured"
-  // createdAt: "2021-01-16T07:24:49.078Z"
-  // id: "600294c15cef960dd3764a7c"
-  // published_at: "2021-01-16T07:24:53.609Z"
-  // updatedAt: "2021-02-07T00:01:48.452Z"
-  // __v: 0
-  // _id: "600294c15cef960dd3764a7c"
-  // [[Prototype]]: Object
-  // createdAt: "2021-07-13T03:13:13.971Z"
-  // ecom_category: {EcomCategoryType: null, _id: '60e7b9f86982520c9dbb684c', ECategoryName: 'אונליין', ECategoryDescription: 'קבוצות התפתחות אשר צועדות יחדיו.\nמשתפים, לומדים ותומכים הדדית בהתפתחות האישית', published_at: '2021-07-09T02:52:46.610Z', …}
-  // id: "60ed04c96982520c9dbb685c"
-  // productLong: " תוכנית הכוונה תעסוקתית און ליין בקבוצה אינטימית.\n\n במשך 10 מפגשים נתבונן פנימה ונכיר ביכולותינו היחודיות, נתחבר אליהן. נייצר שינויים שיעלו את איכות החיים שלנו, האושר והשמחה שלנו כבר במהך התכונית ויצירת חיבור לשימור השינוי בחיינו."
-  // productMainImg: {_id: '60ed04ac6982520c9dbb685b', name: 'arrow logo 1.png', alternativeText: '', caption: '', hash: 'arrow_logo_1_09e6e7c5da', …}
-  // productName: "תוכנית החץ "
-  // productPrice: "2000"
-  // productSecondaryImg: []
-  // productShort: "הכוונה תעסוקתית"
-
   return (
     <>
       <Navbar transparent />

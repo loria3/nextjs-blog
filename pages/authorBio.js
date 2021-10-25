@@ -103,44 +103,64 @@ export default function AuthorBio() {
                 <div className="flex flex-wrap justify-center m-8">
                   <div className="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
                     {writer.WriterLinkedIn ? (
-                      <button
-                        className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i class="far fa-envelope"></i>
-                      </button>
+                      <Link href={writer.WriterLinkedIn}>
+                        <a target="_blank">
+                          <button
+                            className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                            type="button"
+                          >
+                            <i class="far fa-envelope"></i>
+                          </button>
+                        </a>
+                      </Link>
                     ) : null}
                     {writer.WriterEmail ? (
-                      <button
-                        className="bg-lightBlue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i class="fab fa-linkedin-in"></i>
-                      </button>
+                      <Link href={`mailto:${writer.WriterEmail}`}>
+                        <a target="_blank">
+                          <button
+                            className="bg-lightBlue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                            type="button"
+                          >
+                            <i class="fab fa-linkedin-in"></i>
+                          </button>
+                        </a>
+                      </Link>
                     ) : null}
                     {writer.WriterYouTube ? (
-                      <button
-                        className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-youtube"></i>
-                      </button>
+                      <Link href={writer.WriterYouTube}>
+                        <a target="_blank">
+                          <button
+                            className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                            type="button"
+                          >
+                            <i className="fab fa-youtube"></i>
+                          </button>
+                        </a>
+                      </Link>
                     ) : null}
                     {writer.WriterWebsite ? (
-                      <button
-                        className="bg-lightBlue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fas fa-globe"></i>
-                      </button>
+                      <Link href={writer.WriterWebsite}>
+                        <a target="_blank">
+                          <button
+                            className="bg-lightBlue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                            type="button"
+                          >
+                            <i className="fas fa-globe"></i>
+                          </button>
+                        </a>
+                      </Link>
                     ) : null}
                     {writer.WriterFacebook ? (
-                      <button
-                        className="bg-lightBlue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-facebook-f"></i>
-                      </button>
+                      <Link href={writer.WriterFacebook}>
+                        <a target="_blank">
+                          <button
+                            className="bg-lightBlue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                            type="button"
+                          >
+                            <i className="fab fa-facebook-f"></i>
+                          </button>
+                        </a>
+                      </Link>
                     ) : null}
                   </div>
                 </div>
