@@ -21,8 +21,6 @@ export default function Product() {
 
   if (!productItem) return <div></div>;
 
-  console.log({ productItem });
-
   const imgUrl = `${imageUrl.url}${productItem.productMainImg.url}`;
 
   return (

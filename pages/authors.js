@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { BrowserView, MobileView } from "react-device-detect";
 
 import useSWR from "swr";
 import fetchHelper from "../utils/fetcher";
@@ -79,47 +80,93 @@ export default function Authors() {
                 </p>
               </div>
             </div>
+            <BrowserView>
+              <div className="h-512 grid grid-rows-3 grid-flow-col gap-4">
+                {writers.map((rit) => {
+                  let imgUrlWriter = `${imageUrl.url}${
+                    rit.WriterPic.formats.medium
+                      ? rit.WriterPic.formats.medium.url
+                      : rit.WriterPic.url
+                  }`;
 
-            <div className="h-512 grid grid-rows-3 grid-flow-col gap-4">
-              {writers.map((rit) => {
-                let imgUrlWriter = `${imageUrl.url}${
-                  rit.WriterPic.formats.medium
-                    ? rit.WriterPic.formats.medium.url
-                    : rit.WriterPic.url
-                }`;
-
-                return (
-                  <Link
-                    href={{
-                      pathname: "/authorBio/",
-                      query: { id: rit.id },
-                    }}
-                  >
-                    <a key={rit.id} className="m-5" href="/authorBio/">
-                      <div>
-                        <div className="px-6">
-                          {imgUrlWriter !== "none" ? (
-                            <img
-                              alt="..."
-                              src={imgUrlWriter}
-                              className="shadow-lg rounded-full min-h-120-px max-h-120-px max-w-120-px min-w-120-px"
-                            />
-                          ) : null}
-                          <div className="pt-6 text-center">
-                            <h5 className="text-xl font-bold">
-                              {rit.WriterName}
-                            </h5>
-                            <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
-                              {rit.WriterShortDescription}
-                            </p>
+                  return (
+                    <Link
+                      href={{
+                        pathname: "/authorBio/",
+                        query: { id: rit.id },
+                      }}
+                    >
+                      <a key={rit.id} className="m-5" href="/authorBio/">
+                        <div>
+                          <div className="px-6">
+                            {imgUrlWriter !== "none" ? (
+                              <img
+                                alt="..."
+                                src={imgUrlWriter}
+                                className="shadow-lg rounded-full min-h-120-px max-h-120-px max-w-120-px min-w-120-px"
+                              />
+                            ) : null}
+                            <div className="pt-6 text-center">
+                              <h5 className="text-xl font-bold">
+                                {rit.WriterName}
+                              </h5>
+                              <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
+                                {rit.WriterShortDescription}
+                              </p>
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    </a>
-                  </Link>
-                );
-              })}
-            </div>
+                      </a>
+                    </Link>
+                  );
+                })}
+              </div>
+            </BrowserView>
+            <MobileView>
+              <div className="flex flex-wrap justify-center text-center my-6">
+                <div className="justify-center text-center">
+                  {writers.map((rit) => {
+                    let imgUrlWriter = `${imageUrl.url}${
+                      rit.WriterPic.formats.medium
+                        ? rit.WriterPic.formats.medium.url
+                        : rit.WriterPic.url
+                    }`;
+
+                    return (
+                      <Link
+                        href={{
+                          pathname: "/authorBio/",
+                          query: { id: rit.id },
+                        }}
+                      >
+                        <a key={rit.id} className="m-5" href="/authorBio/">
+                          <div className="my-6">
+                            <div className="px-6">
+                              {imgUrlWriter !== "none" ? (
+                                <img
+                                  alt="..."
+                                  src={imgUrlWriter}
+                                  className="shadow-lg rounded-full min-h-120-px max-h-120-px max-w-120-px min-w-120-px inline-block"
+                                />
+                              ) : null}
+                              <div className="pt-6 text-center">
+                                <h5 className="text-xl font-bold">
+                                  {rit.WriterName}
+                                </h5>
+                                <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
+                                  {rit.WriterShortDescription}
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <hr />
+                        </a>
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
+            </MobileView>
           </div>
         </section>
         {/* 

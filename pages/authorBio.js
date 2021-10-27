@@ -86,7 +86,7 @@ export default function AuthorBio() {
                       <img
                         alt={writer.WriterName}
                         src={imgUrlWriter}
-                        className="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 min-h-120-px max-h-120-px max-w-120-px min-w-120-px"
+                        className="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 lg:-ml-16 min-h-120-px max-h-120-px max-w-120-px min-w-120-px"
                       />
                     </div>
                   </div>
@@ -121,7 +121,7 @@ export default function AuthorBio() {
                             className="bg-lightBlue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                             type="button"
                           >
-                            <i class="fab fa-linkedin-in"></i>
+                            <i className="fab fa-linkedin-in"></i>
                           </button>
                         </a>
                       </Link>

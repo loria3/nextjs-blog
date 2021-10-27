@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { BrowserView, MobileView } from "react-device-detect";
 
 import useSWR from "swr";
 import fetchHelper from "../utils/fetcher";
@@ -71,54 +72,100 @@ export default function Products() {
         <section className="pt-20 pb-48">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center text-center mb-24">
-              <div className="w-full lg:w-6/12 px-4">
-                <h2 className="text-4xl font-semibold">המוצרים שלנו</h2>
+              <div className="">
+                <h2 className="text-4xl font-semibold">סדנאות ומוצרים</h2>
 
                 <p className="text-lg bold leading-relaxed m-4 text-blueGray-500">
                    כנסו לאפליקציה כדי להזמין מוצר ולהכיר את המומחים
                 </p>
               </div>
             </div>
+            <BrowserView>
+              <div className="h-512 grid grid-rows-3 grid-flow-col gap-4">
+                {products.map((prd) => {
+                  let imgUrl = `${imageUrl.url}${
+                    prd.productMainImg.formats.small
+                      ? prd.productMainImg.formats.small.url
+                      : prd.productMainImg.url
+                  }`;
 
-            <div className="h-512 grid grid-rows-3 grid-flow-col gap-4">
-              {products.map((prd) => {
-                let imgUrl = `${imageUrl.url}${
-                  prd.productMainImg.formats.small
-                    ? prd.productMainImg.formats.small.url
-                    : prd.productMainImg.url
-                }`;
+                  return (
+                    <Link
+                      href={{
+                        pathname: "/product/",
+                        query: { id: prd.id },
+                      }}
+                    >
+                      <a key={prd.id} className="m-1" href="/product/">
+                        <div className="flex flex-wrap justify-center text-center mb-16">
+                          <div className="w-full lg:w-6/12 px-4">
+                            {imgUrl ? (
+                              <img
+                                alt="..."
+                                src={imgUrl}
+                                className="shadow-lg min-h-120-px max-h-120-px max-w-120-px min-w-120-px"
+                              />
+                            ) : null}
 
-                return (
-                  <Link
-                    href={{
-                      pathname: "/product/",
-                      query: { id: prd.id },
-                    }}
-                  >
-                    <a key={prd.id} className="m-1" href="/product/">
-                      <div className="flex flex-wrap justify-center text-center mb-16">
-                        <div className="w-full lg:w-6/12 px-4">
-                          {imgUrl ? (
-                            <img
-                              alt="..."
-                              src={imgUrl}
-                              className="shadow-lg min-h-120-px max-h-120-px max-w-120-px min-w-120-px"
-                            />
-                          ) : null}
-
-                          <p className="text-lg bold leading-relaxed m-4 text-blueGray-500">
-                            {prd.productName}
-                          </p>
-                          <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
-                            {prd.productShort}
-                          </p>
+                            <p className="text-lg bold leading-relaxed m-4 text-blueGray-500">
+                              {prd.productName}
+                            </p>
+                            <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
+                              {prd.productShort}
+                            </p>
+                          </div>
                         </div>
-                      </div>
-                    </a>
-                  </Link>
-                );
-              })}
-            </div>
+                      </a>
+                    </Link>
+                  );
+                })}
+              </div>
+            </BrowserView>
+            <MobileView>
+              <div className="flex flex-wrap justify-center text-center my-6">
+                <div className="justify-center text-center">
+                  {products.map((rit) => {
+                    let imgUrl = `${imageUrl.url}${
+                      rit.productMainImg.formats.small
+                        ? rit.productMainImg.formats.small.url
+                        : rit.productMainImg.url
+                    }`;
+
+                    return (
+                      <Link
+                        href={{
+                          pathname: "/product/",
+                          query: { id: rit.id },
+                        }}
+                      >
+                        <a key={rit.id} href="/product/">
+                          <div className="my-6">
+                            <div className="px-6">
+                              {imgUrl ? (
+                                <img
+                                  alt="..."
+                                  src={imgUrl}
+                                  className="shadow-lg max-w-150-px inline-block"
+                                />
+                              ) : null}
+                            </div>
+                            <div className="pt-6 text-center ">
+                              <h5 className="text-xl font-bold">
+                                {rit.productName}
+                              </h5>
+                              <p className="mt-1 text-sm text-blueGray-400 uppercase font-semibold">
+                                {rit.productShort}
+                              </p>
+                            </div>
+                          </div>
+                          <hr />
+                        </a>
+                      </Link>
+                    );
+                  })}
+                </div>
+              </div>
+            </MobileView>
           </div>
         </section>
         {/* 

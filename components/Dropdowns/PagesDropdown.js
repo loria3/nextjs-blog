@@ -43,7 +43,7 @@ const PagesDropdown = () => {
               "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
             }
           >
-             דף הבית
+            דף הבית
           </a>
         </Link>
         <Link href="/privacy">
@@ -55,25 +55,6 @@ const PagesDropdown = () => {
           >
             פרטיות
           </a>
-        </Link>
-        <Link href="/products">
-          <a
-            href="/products"
-            className={
-              "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-            }
-          >
-            מוצרים
-          </a>
-        </Link>
-
-        <Link href="/authors">
-          <a
-            href="#authors"
-            className={
-              "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-            }
-          ></a>
         </Link>
       </div>
     </>
