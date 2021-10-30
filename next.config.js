@@ -9,6 +9,8 @@ module.exports = {
       "/products": { page: "/products" },
       "/profile": { page: "/profile" },
       "/authorBio": { page: "/authorBio" },
+      "/articles": { page: "/articles" },
+      "/article": { page: "/article" },
     };
   },
 };

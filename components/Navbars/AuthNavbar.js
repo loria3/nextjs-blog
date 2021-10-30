@@ -51,6 +51,14 @@ export default function Navbar(props) {
                   <span className="inline-block ml-1">סדנאות ומפגשים</span>
                 </a>
               </li>
+               <li className="flex items-center">
+                <a
+                  className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                  href="/articles"
+                >
+                  <span className="inline-block ml-1">כתבות</span>
+                </a>
+              </li>
               <li className="flex items-center">
                 <PagesDropdown />
               </li>

@@ -15,6 +15,10 @@ module.exports = {
       ...colors,
     },
     extend: {
+      gridTemplateColumns: {
+         
+         '4': 'repeat(4, minmax(0, 1fr))',
+        },
       minHeight: {
         "screen-75": "75vh",
       },
