@@ -73,7 +73,7 @@ export default function Products() {
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap justify-center text-center mb-24">
               <div className="">
-                <h2 className="text-4xl font-semibold">סדנאות ומוצרים</h2>
+                <h2 className="text-4xl font-semibold">מפגשים ומוצרים</h2>
 
                 <p className="text-lg bold leading-relaxed m-4 text-blueGray-500">
                    כנסו לאפליקציה כדי להזמין מוצר ולהכיר את המומחים

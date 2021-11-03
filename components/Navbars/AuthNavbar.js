@@ -16,7 +16,7 @@ export default function Navbar(props) {
                 className="text-white text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
                 href="#"
               >
-                US.LY
+                us.ly
               </a>
             </Link>
             <button
@@ -48,10 +48,10 @@ export default function Navbar(props) {
                   className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   href="/products"
                 >
-                  <span className="inline-block ml-1">סדנאות ומפגשים</span>
+                  <span className="inline-block ml-1">מפגשים ומוצרים</span>
                 </a>
               </li>
-               <li className="flex items-center">
+              <li className="flex items-center">
                 <a
                   className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   href="/articles"

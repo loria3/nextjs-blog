@@ -30,7 +30,7 @@ export default function DeepLinks() {
       <Redirect>
         <div className="container">
           <Head>
-            <title>US.LY - Deeplinks</title>
+            <title>us.ly - Deeplinks</title>
             <link rel="icon" href="/favicon.ico" />
           </Head>
 
